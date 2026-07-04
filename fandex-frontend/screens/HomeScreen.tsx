@@ -16,7 +16,7 @@ const HomeScreen = () => {
         const response = await api.get('/api/markets');
         dispatch(fetchMarketsSuccess(response.data));
       } catch (err) {
-        dispatch(fetchMarketsFailure(err.toString()));
+        dispatch(fetchMarketsFailure(err instanceof Error ? err.message : String(err)));
       }
     };
 

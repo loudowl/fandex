@@ -2,7 +2,15 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const MarketCard = ({ market }) => {
+interface Market {
+  id: string;
+  title: string;
+  yesProbability: number;
+  volume: number;
+  category: string;
+}
+
+const MarketCard = ({ market }: { market: Market }) => {
   const navigation = useNavigation();
 
   const handlePress = () => {
