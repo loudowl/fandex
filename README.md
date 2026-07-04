@@ -39,12 +39,12 @@ The Fandex architecture consists of a mobile client built with React Native, a b
 
 ```mermaid
 flowchart TD
-    client[Client (React Native / Expo)]
-    api[API (Node.js/Express)]
-    db[(PostgreSQL)]
-    kalshi[Kalshi API v2]
-    polymarket[Polymarket CLOB API]
-    openai[OpenAI GPT-4o mini]
+    client["Client (React Native / Expo)"]
+    api["API (Node.js/Express)"]
+    db[("PostgreSQL")]
+    kalshi["Kalshi API v2"]
+    polymarket["Polymarket CLOB API"]
+    openai["OpenAI GPT-4o mini"]
 
     client -->|requests| api
     api -->|queries| db
